@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="Book Managment">
+<head>
+    <meta charset="utf-8" />
+    <title>Varun Online Book Managment</title>
+    <style>
+        #navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .item {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+        .active {
+            background-color: #04AA6D;
+        }
+        div {
+            color:azure;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+</head>
+<body style="background-color:black">
+    <ul id="navigation">
+        <li class="item"><a class="active" href="#/">Home</a></li>
+        <li class="item"><a href="#/Book">Books List</a></li>
+        <li class="item"><a href="#/Author">Authors List</a></li>
+        <li class="item"><a href="#/PopularBooks">Popular Books</a></li>
+        <li class="item"><a href="#/Contact">Contact</a></li>
+    </ul>
+
+    <div ng-view></div>
+    <script src="app.js"></script>
+
+</body>
+</html>
